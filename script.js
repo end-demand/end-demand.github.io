@@ -1,27 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- Homepage Hero Image Slider ---
-    const slides = document.querySelectorAll('.hero-slider .slide');
-    if (slides.length > 0) {
-        let currentSlide = 0;
-        
-        function showSlide(index) {
-            slides.forEach((slide, i) => {
-                slide.classList.remove('active');
-                if (i === index) {
-                    slide.classList.add('active');
-                }
-            });
-        }
-
-        function nextSlide() {
-            currentSlide = (currentSlide + 1) % slides.length;
-            showSlide(currentSlide);
-        }
-        
-        showSlide(currentSlide); // Show first slide immediately
-        setInterval(nextSlide, 5000); // Change slide every 5 seconds
-    }
+    // --- Homepage Hero Image Slider code has been removed ---
 
     // --- Cookie Consent Banner ---
     const cookieBanner = document.getElementById('cookie-banner');
@@ -31,7 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // if (!localStorage.getItem('cookiesAccepted')) {
     //     cookieBanner.style.display = 'flex';
     // }
-    
+
     if (acceptCookiesButton) {
         acceptCookiesButton.addEventListener('click', function() {
             if (cookieBanner) {
@@ -41,4 +20,5 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
     }
+
 });
