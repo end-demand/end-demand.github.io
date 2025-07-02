@@ -28,7 +28,7 @@
             <li><a href="#facts">Know the Facts</a></li>
             <li><a href="switzerland.html">Switzerland</a></li>
             <li><a href="#ending-demand">Ending Demand</a></li>
-            <li><a href="#survivors">Survivors</a></li>
+            <li><a href="#survivors">Survivors</a>
             <!-- Set this link as active -->
             <li><a href="contact.html" class="donate-button active">Donate</a></li>
         </ul>
@@ -43,7 +43,7 @@
         <h2>Get In Touch</h2>
         <p>Have a question or want to get in touch? Use the form below and we will get back to you as soon as possible.</p>
         
-        <!-- YOUR FORM ADDED HERE (with styling classes) -->
+        <!-- FIXED FORM: The 'action' attribute now has the correct URL -->
         <form
           action="https://formspree.io/f/xrbkdgep"
           method="POST"
@@ -53,13 +53,13 @@
             <label for="email">
               Your email:
             </label>
-            <input type="email" name="email" id="email">
+            <input type="email" name="email" id="email" required>
           </div>
           <div class="form-group">
             <label for="message">
               Your message:
             </label>
-            <textarea name="message" id="message" rows="6"></textarea>
+            <textarea name="message" id="message" rows="6" required></textarea>
           </div>
           <!-- your other form fields go here -->
           <button type="submit" class="cta-button">Send</button>
@@ -71,12 +71,21 @@
         <h2>Support Our Cause</h2>
         <p>Your contribution is vital for our work. We are all unpaid volunteers and receive no government funding. Every donation helps us fight for the dignity of every human being. Thank you for your support!</p>
         
-        <!-- PAYPAL CONTAINER AND SCRIPT (PART 2) ADDED HERE -->
-        <div id="paypal-container-56UD2ZHBJPLBC" style="margin-top: 2rem;"></div>
+        <!-- PAYPAL CONTAINER AND SCRIPT (PART 2) -->
+        <div id="paypal-container-56UD2ZHBJPLBC" style="margin-top: 2rem; display: inline-block;"></div>
         <script>
-          paypal.HostedButtons({
-            hostedButtonId: "56UD2ZHBJPLBC",
-          }).render("#paypal-container-56UD2ZHBJPLBC")
+          try {
+            paypal.HostedButtons({
+              hostedButtonId: "56UD2ZHBJPLBC",
+            }).render("#paypal-container-56UD2ZHBJPLBC")
+          } catch (error) {
+            console.error("PayPal button failed to render:", error);
+            // Optionally, display a message to the user
+            const container = document.getElementById("paypal-container-56UD2ZHBJPLBC");
+            if(container) {
+                container.innerHTML = "Sorry, the donation button could not be loaded. Please try again later or disable your ad blocker.";
+            }
+          }
         </script>
     </section>
 
