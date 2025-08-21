@@ -5,37 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Donate - End Demand Switzerland</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="hotline">
-            <p><strong>Hotline:</strong> Open 4-6pm daily. Call [Your Number Here]. Outside these hours, leave a message for a callback.</p>
+        <div class="hotline-banner">
+            <p>Hotline reserved for women in prostitution: Call XXXX. Outside these hours, leave a message for a callback</p>
         </div>
         <nav>
-            <a href="index.html" class="logo"><img src="images/logo.svg" alt="End Demand Switzerland Logo"></a>
+            <a href="index.html" class="logo-link"><img src="images/logo.svg" alt="End Demand Switzerland Logo" class="logo-img"></a>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="trafficking.html">Human Trafficking</a></li>
                 <li><a href="switzerland.html">Switzerland</a></li>
-                <li><a href="#ending-demand">Ending Demand</a></li>
                 <li><a href="survivors.html">Survivors</a></li>
-                <li><a href="donate.html">Donate</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="donate.html" class="donate-button active">Donate</a></li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section class="donate">
+    <main class="page-content">
+        <section class="donate-section">
             <h1>Support Our Cause</h1>
             <p>Your contribution is vital for our work. We are all unpaid volunteers and receive no government funding. Every donation helps us fight for the dignity of every human being. Thank you for your support!</p>
             <!-- PayPal Button Container -->
-            <div id="paypal-container-56UD2ZHBJPLBC"></div>
+            <div id="paypal-container-56UD2ZHBJPLBC" style="margin-top: 2rem;"></div>
         </section>
     </main>
     <footer>
-        <p>© 2024 End Demand Switzerland. All Rights Reserved.</p>
-        <p><a href="contact.html">Contact Us</a> | <a href="#privacy">Privacy Policy</a></p>
+        <div class="footer-content">
+            <p>© 2024 End Demand Switzerland. All Rights Reserved.</p>
+            <div class="footer-links">
+                <a href="contact.html">Contact Us</a>
+                <a href="#privacy">Privacy Policy</a>
+            </div>
+        </div>
     </footer>
     <!-- PayPal Script -->
     <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=CHF" data-sdk-integration-source="button-factory"></script>
