@@ -1,114 +1,110 @@
 /* General Body & Typography */
 :root {
---primary-color: #005f73; /* A deep teal */
---secondary-color: #0a9396; /* A lighter teal */
---accent-color: #ee9b00; /* A warm orange for CTAs */
---dark-bg: #232a34;
---light-text: #f8f9fa;
---dark-text: #343a40;
+    --primary-color: #005f73; /* A deep teal */
+    --secondary-color: #0a9396; /* A lighter teal */
+    --accent-color: #ee9b00; /* A warm orange for CTAs */
+    --dark-bg: #232a34;
+    --light-text: #f8f9fa;
+    --dark-text: #343a40;
 }
 
 body {
-font-family: 'Open Sans', sans-serif;
-margin: 0;
-color: var(--dark-text);
-line-height: 1.7;
-background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    color: var(--dark-text);
+    line-height: 1.7;
+    background-color: #fff;
 }
 
 h1, h2, h3, h4, h5, h6 {
-font-family: 'Montserrat', sans-serif;
-color: var(--primary-color);
-font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    color: var(--primary-color);
+    font-weight: 700;
 }
 
 /* Header & Navigation */
 .hotline-banner {
-background-color: var(--accent-color);
-color: var(--dark-text);
-text-align: center;
-padding: 8px 5%;
-font-size: 0.9em;
-font-weight: 600;
+    background-color: var(--accent-color);
+    color: var(--dark-text);
+    text-align: center;
+    padding: 8px 5%;
+    font-size: 0.9em;
+    font-weight: 600;
 }
 
 nav {
-display: flex;
-justify-content: space-between;
-align-items: center;
-padding: 1rem 5%;
-background-color: #fff;
-box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-position: sticky;
-top: 0;
-z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo-img {
-height: 50px; /* Adjust size as needed */
-width: auto;
+    height: 50px; /* Adjust size as needed */
+    width: auto;
 }
 
 nav ul {
-list-style: none;
-display: flex;
-margin: 0;
-padding: 0;
-align-items: center;
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    align-items: center;
 }
 
 nav ul li {
-margin-left: 25px;
+    margin-left: 25px;
 }
 
 nav ul li a {
-text-decoration: none;
-color: var(--primary-color);
-font-weight: 600;
-transition: color 0.3s;
-padding-bottom: 5px;
-border-bottom: 2px solid transparent;
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 600;
+    transition: color 0.3s;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
 }
 
 nav ul li a:hover, nav ul li a.active {
-color: var(--accent-color);
-border-bottom-color: var(--accent-color);
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
 }
 
 .donate-button {
-background-color: var(--accent-color);
-color: white !important;
-padding: 8px 15px;
-border-radius: 5px;
-transition: background-color 0.3s;
-border-bottom: none !important;
+    background-color: var(--accent-color);
+    color: white !important;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    border-bottom: none !important;
 }
 
 .donate-button:hover {
-background-color: #ca8500;
+    background-color: #ca8500;
 }
 .donate-button.active {
-outline: 2px solid var(--primary-color);
+    outline: 2px solid var(--primary-color);
 }
 
-/* MODIFIED: Hero Section is now static */
+
+/* Hero Slider Section (Homepage) */
 .hero-slider {
-position: relative;
-height: 70vh;
-overflow: hidden;
-background-color: var(--dark-text);
+    position: relative;
+    height: 70vh;
+    overflow: hidden;
+    background-color: var(--dark-text);
 }
 .hero-slider .slide {
-position: absolute; 
-width: 100%; 
-height: 100%; 
-background-size: cover; 
-background-position: center; 
-opacity: 1; /* Image is always visible */
-background-attachment: fixed; /* Creates the fixed/parallax effect on scroll */
+    position: absolute; width: 100%; height: 100%; background-size: cover; background-position: center; opacity: 0; transition: opacity 1.5s ease-in-out;
 }
+.hero-slider .slide.active { opacity: 1; }
 .hero-title {
-position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; text-align: center; text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
 }
 .hero-title h1 { font-size: 4em; color: white; margin: 0; animation: fadeInDown 1.5s ease-out; }
 @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
@@ -123,7 +119,7 @@ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color
 .content-section { padding: 4rem 10%; text-align: center; }
 .content-section-dark { background-color: var(--dark-bg); color: var(--light-text); padding: 4rem 10%; text-align: center; }
 .content-section-dark h2 { color: var(--light-text); }
-.cta-button { display: inline-block; background-color: var(--accent-color); color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; transition: background-color 0.3s; border: none; font-family: 'Open Sans', sans-serif; cursor: pointer; font-size: 1em; }
+.cta-button { display: inline-block; background-color: var(--accent-color); color: white; padding: 12px 25px; border-radius: 5px; text-decoration: none; font-weight: bold; margin-top: 1rem; transition: background-color 0.3s; border: none; font-family: 'Open Sans', sans-serif; cursor: pointer; }
 .cta-button:hover { background-color: #ca8500; }
 
 /* "Did You Know?" Feature */
@@ -132,131 +128,62 @@ position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color
 
 /* General Page Content (for About, Switzerland, etc.) */
 .page-content {
-max-width: 900px;
-margin: 4rem auto;
-padding: 0 2rem;
+    max-width: 900px;
+    margin: 4rem auto;
+    padding: 0 2rem;
 }
 .page-content h1 {
-text-align: center;
-margin-bottom: 2.5rem;
-font-size: 2.8em;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    font-size: 2.8em;
 }
 .page-content section {
-margin-bottom: 3rem;
-border-bottom: 1px solid #eee;
-padding-bottom: 2rem;
-}
-.page-content section:last-child {
-    border-bottom: none;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 2rem;
 }
 .page-content ul {
-list-style-type: disc;
-padding-left: 20px;
+    list-style-type: disc;
+    padding-left: 20px;
 }
 .page-content ul li {
-margin-bottom: 0.8rem;
+    margin-bottom: 0.8rem;
 }
 
 /* Contact Form */
 .contact-form {
-display: flex;
-flex-direction: column;
-gap: 1.5rem;
-max-width: 700px; /* Constrain form width */
-margin: 2rem auto 0; /* Center form */
-text-align: left; /* Align labels left */
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 .form-group {
-display: flex;
-flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .contact-form label {
-margin-bottom: 0.5rem;
-font-weight: 600;
-color: var(--primary-color);
-}
-.contact-form input, .contact-form textarea {
-padding: 12px;
-border: 1px solid #ccc;
-border-radius: 4px;
-font-size: 1em;
-font-family: 'Open Sans', sans-serif;
-width: 100%;
-box-sizing: border-box; /* Include padding in width */
-}
-.contact-form input:focus, .contact-form textarea:focus {
-outline: none;
-border-color: var(--secondary-color);
-box-shadow: 0 0 5px rgba(10, 147, 150, 0.5);
-}
-
-.donate-section {
-background-color: #f8f9fa;
-padding: 3rem 2rem;
-margin-top: 4rem;
-border-radius: 8px;
-text-align: center;
-}
-
-
-/* Responsive Video Container */
-.video-container {
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    margin: 2rem 0; /* Adds some space above and below the video */
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
-}
-
-/* On-Page Navigation Menu */
-.page-nav-menu {
-    list-style-type: none;
-    padding: 1rem 1.5rem;
-    margin: 2rem 0 3rem 0;
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    background-color: #f8f9fa;
-}
-.page-nav-menu li {
     margin-bottom: 0.5rem;
-}
-.page-nav-menu li:last-child {
-    margin-bottom: 0;
-}
-.page-nav-menu a {
-    text-decoration: none;
     font-weight: 600;
     color: var(--primary-color);
 }
-.page-nav-menu a:hover {
-    color: var(--accent-color);
+.contact-form input, .contact-form textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    font-family: 'Open Sans', sans-serif;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 5px rgba(10, 147, 150, 0.5);
 }
 
-/* Blockquote Styling */
-blockquote {
-    border-left: 4px solid var(--secondary-color);
-    padding-left: 1.5rem;
-    margin: 1.5rem 0;
-    font-style: italic;
-    color: #555;
-}
-
-/* Big Arrow Styling */
-.big-arrow {
+.donate-section {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    margin-top: 4rem;
+    border-radius: 8px;
     text-align: center;
-    font-size: 3em;
-    color: var(--primary-color);
-    margin: 1rem 0;
-    line-height: 1;
 }
 
 /* Footer */
@@ -266,30 +193,30 @@ footer { background-color: var(--dark-bg); color: var(--light-text); padding: 2r
 
 /* Cookie Banner */
 #cookie-banner {
-position: fixed;
-bottom: 0;
-left: 0;
-width: 100%;
-background-color: var(--dark-bg);
-color: var(--light-text);
-padding: 1rem 5%;
-display: flex;
-justify-content: space-between;
-align-items: center;
-z-index: 2000;
-box-sizing: border-box;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 1rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2000;
+    box-sizing: border-box;
 }
 #cookie-banner p {
-margin: 0;
-padding-right: 1rem;
-font-size: 0.9em;
+    margin: 0;
+    padding-right: 1rem;
+    font-size: 0.9em;
 }
 #cookie-banner button {
-background-color: var(--accent-color);
-color: white;
-border: none;
-padding: 10px 20px;
-border-radius: 5px;
-cursor: pointer;
-flex-shrink: 0;
+    background-color: var(--accent-color);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
 }
