@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate - End Demand Switzerland</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="hotline">
+            <p><strong>Hotline:</strong> Open 4-6pm daily. Call [Your Number Here]. Outside these hours, leave a message for a callback.</p>
+        </div>
+        <nav>
+            <a href="index.html" class="logo"><img src="images/logo.svg" alt="End Demand Switzerland Logo"></a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="trafficking.html">Human Trafficking</a></li>
+                <li><a href="switzerland.html">Switzerland</a></li>
+                <li><a href="#ending-demand">Ending Demand</a></li>
+                <li><a href="survivors.html">Survivors</a></li>
+                <li><a href="donate.html">Donate</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="donate">
+            <h1>Support Our Cause</h1>
+            <p>Your contribution is vital for our work. We are all unpaid volunteers and receive no government funding. Every donation helps us fight for the dignity of every human being. Thank you for your support!</p>
+            <div id="paypal-container-56UD2ZHBJPLBC"></div>
+        </section>
+    </main>
+    <footer>
+        <p>© 2024 End Demand Switzerland. All Rights Reserved.</p>
+        <p><a href="contact.html">Contact Us</a> | <a href="#privacy">Privacy Policy</a></p>
+    </footer>
+    <script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID"></script>
+    <script>
+        try {
+            paypal.HostedButtons({
+                hostedButtonId: "56UD2ZHBJPLBC",
+            }).render("#paypal-container-56UD2ZHBJPLBC")
+        } catch (error) {
+            console.error("PayPal button failed to render:", error);
+            const container = document.getElementById("paypal-container-56UD2ZHBJPLBC");
+            if(container) {
+                container.innerHTML = "Sorry, the donation button could not be loaded. Please try again later or disable your ad blocker.";
+            }
+        }
+    </script>
+</body>
+</html>
