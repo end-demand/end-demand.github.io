@@ -1,24 +1,26 @@
 document.addEventListener('DOMContentLoaded', function() {
 
-    // --- Homepage Hero Image Slider code has been removed ---
-
-    // --- Cookie Consent Banner ---
-    const cookieBanner = document.getElementById('cookie-banner');
-    const acceptCookiesButton = document.getElementById('accept-cookies');
-
-    // For a real site, you'd check a cookie here.
-    // if (!localStorage.getItem('cookiesAccepted')) {
-    //     cookieBanner.style.display = 'flex';
-    // }
-
-    if (acceptCookiesButton) {
-        acceptCookiesButton.addEventListener('click', function() {
-            if (cookieBanner) {
-                cookieBanner.style.display = 'none';
-                // To remember the choice, you would set a cookie or use localStorage
-                // localStorage.setItem('cookiesAccepted', 'true');
-            }
+    // --- Mobile Hamburger Menu ---
+    const hamburger = document.getElementById('hamburger-menu');
+    const nav = document.querySelector('nav');
+    if (hamburger && nav) {
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('nav-active');
         });
     }
+
+
+    // Function to run analytics script
+    const runAnalytics = () => {
+        // --- Counter.dev Analytics Script ---
+        // This will only run if the user clicks "Accept"
+        const analyticsScript = document.createElement('script');
+        analyticsScript.async = true;
+        analyticsScript.src = 'https://cdn.counter.dev/script.js';
+        analyticsScript.setAttribute('data-id', 'YOUR_COUNTER_DEV_ID'); // <-- IMPORTANT: Replace with your actual ID
+        analyticsScript.setAttribute('data-utcoffset', '1'); // Optional: Adjust for your timezone
+        document.head.appendChild(analyticsScript);
+        console.log("Analytics script loaded.");
+    };
 
 });
