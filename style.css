@@ -249,6 +249,37 @@ footer { background-color: var(--dark-bg); color: var(--light-text); padding: 2r
 .footer-content { display: flex; justify-content: space-between; align-items: center; max-width: 1200px; margin: 0 auto; flex-wrap: wrap; gap: 1rem; }
 .footer-links a { color: var(--light-text); text-decoration: none; margin-left: 15px; }
 
+.footer-right-column {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.social-media-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.social-media-links a {
+    color: var(--light-text);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    line-height: 0;
+}
+
+.social-media-links a:hover {
+    color: var(--accent-color);
+}
+
+.social-media-links svg {
+    width: 24px;
+    height: 24px;
+}
+
+
 /* Responsive Design */
 @media (max-width: 850px) {
     /* MODIFIED: Adjusted padding to move hamburger menu */
