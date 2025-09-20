@@ -337,3 +337,16 @@ footer { background-color: var(--dark-bg); color: var(--light-text); padding: 2r
         flex-grow: 0;
     }
 }
+
+.paypal-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+/* Optional: restrict max width for better look */
+#paypal-container-56UD2ZHBJPLBC {
+    max-width: 320px;
+    width: 100%;
+}
