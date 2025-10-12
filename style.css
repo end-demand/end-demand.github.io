@@ -346,6 +346,12 @@ footer { background-color: var(--dark-bg); color: var(--light-text); padding: 2r
     }
 
     /* --- MODIFIED RULES FOR HERO SECTION --- */
+
+    /* ADDITION: Set a specific height for the hero section on mobile */
+    .hero-slider {
+        height: 50vh; /* This sets the height to 50% of the viewport height */
+    }
+
     .hero-title h1 {
         font-size: 3em; /* Adjust font size for mobile */
         white-space: normal; /* Allow text to wrap */
@@ -387,10 +393,4 @@ footer { background-color: var(--dark-bg); color: var(--light-text); padding: 2r
 #paypal-container-56UD2ZHBJPLBC {
     max-width: 320px;
     width: 100%;
-}
-
-.hero-slider .slide img {
-    width: 100%;
-    height: auto;
-    display: block;
-}
+}```
